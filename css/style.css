@@ -45,7 +45,7 @@ button {
     font-size: 40px;
 }
 .header {
-	background: url(../images/banner.jpg)no-repeat center top;
+	background: url(../images/banner.jpeg)no-repeat center top;
 	background-size: 100% 100%;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -339,7 +339,7 @@ ul.popup_links li{
 	display:inline-block;
 	float: none;
 }
-i.link{
+/*i.link{
 	background: url(../images/icons.png)no-repeat -5px -6px;
 	width: 30px;
 	height: 30px;
@@ -356,7 +356,7 @@ i.like{
 	width: 30px;
 	height: 30px;
 	display: inline-block;
-}
+}*/
 /*--testmonial--*/
 #testimonial-section {
     display: block;
@@ -391,7 +391,7 @@ i.like{
 	right: 14em;
 }
 .testimonial p {
-    color: #f2efe5;
+    color: #fff;
     font-size: 18px;
     font-style: italic;
     line-height: 22px;
@@ -406,7 +406,7 @@ i.like{
     margin:0 auto;
 }
 .testimonial h4 {
-    color: #f2efe5;
+    color: #fff;
     float: right;
     font-size: 15px;
     font-style: italic;
@@ -443,7 +443,7 @@ i.like{
 	text-align: center;
 }
 .team-grid-3{
-	background-color: #ccc8b6;
+	background-color: #fff;
 	padding:6em 3em 0;
 	text-align: center;
 	min-height: 505px;
@@ -542,7 +542,7 @@ ul.social li a i.google:hover{
 	left: -27px;
 }
 .team-grid-5{
-	background: #ccc8b6;
+	background: #fff;
 	padding:6em 3em 0;
 	text-align: center;
 	min-height: 505px;
@@ -563,7 +563,7 @@ ul.social li a i.google:hover{
 }
 /***--- Newsletter ---***/
 .newsletter_grid{
-	background:#f2efe5;
+	background:#fff;
 	padding:8em 6em 0;
 	min-height:505px;
 }
@@ -596,14 +596,14 @@ ul.social li a i.google:hover{
 	outline: none;
 	font-size: 13px;
 	padding: 12px;
-	color:#9a977a;
+	color:#fff;
 	width:100%;
 	text-transform: uppercase;
 	display: block;
 	overflow: hidden;
 }
 .newsletter input[type="submit"] {
-	background: #9a977a;
+	background: #fff;
 	text-transform: uppercase;
 	border: none;
 	padding: 12px;
@@ -653,7 +653,7 @@ i.tw_icon{
 	background: url(../images/icons.png)no-repeat -89px -162px;
 }
 .twitter-div p {
-    color: #f2efe5;
+    color: #fff;
     font-size: 18px;
     font-style: italic;
     line-height: 25px;
@@ -666,7 +666,7 @@ i.tw_icon{
 	overflow: hidden;
 }
 .gallery-title {
-    background-color: #afac9c;
+    background-color: #fff;
     display: block;
     float: left;
     min-height: 270px;
@@ -789,7 +789,7 @@ ul.popup_links.g_links {
 	text-transform: uppercase;
 }
 .contact-form input[type="submit"] {
-	background: #9a977a;
+	background: #fff;
 	text-transform: uppercase;
 	border: none;
 	padding:1.5em 1em;
@@ -960,4 +960,42 @@ ul.contact-social li a i.google:hover{
 	border: none;
 	text-indent: 100%;
 	background: url(../images/move-to-top.png) no-repeat 0px 0px;
+}
+
+
+
+.divColor
+{
+	background: #000;
+}
+.divVisibility
+{
+	display: block;
+	height: 100%;
+	width: : 100%;
+}
+.divInvisibility
+{
+	display: none;
+	height: 0px;
+	width: : 0%;
+}
+@media only screen and (max-width: 768px) {
+    .divVisibility
+	{
+		display: none;
+		height: 0px;
+		width: : 0px;
+	}
+	.divInvisibility
+	{
+		display: block;
+		height: 100%;
+		width: : 100%;
+	}
+	.divColor
+	{
+		background: #333;
+		font-size: 37px;
+	}
 }
