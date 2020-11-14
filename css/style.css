@@ -3,7 +3,7 @@ h1, h2, h3 {margin-top: 0;}
 ul, ol {margin: 0;}
 p {margin: 0;}
 html, body{
- font-family: 'Noticia Text', serif;
+ font-family: 'Quicksand', serif;
    font-size: 100%;
    background:#fff; 
 }
@@ -78,7 +78,7 @@ ul.nav-list li a {
 	        text-decoration: none; 
 			text-transform: uppercase;
 	        color:#000;
-	        font-size:14px;
+	        font-size:20px;
 	        -webkit-transition: all 0.5s ease;
 			-moz-transition: all 0.5s ease;
 			-o-transition: all 0.5s ease;
@@ -191,7 +191,7 @@ ul.nav-list li a:hover { color:#333333; border-bottom: 3px solid #000000; paddin
 }
 .about_right p {
   color: #000000;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   text-align: left;
 }
@@ -392,7 +392,7 @@ i.like{
 }
 .testimonial p {
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
     font-style: italic;
     line-height: 22px;
     margin-top: 135px;
@@ -452,14 +452,14 @@ i.like{
 }
 .team-grid-3 h3 {
     color: #000000;
-    font-size: 23px;
-    font-weight: bold;
+    font-size: 16px;
+    
     margin-bottom: 35px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .team-grid-3 p {
     color: #000000;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     text-align: left;
 }
@@ -834,14 +834,14 @@ ul.contact-list-one {
 ul.contact-list-one h5, ul.contact-list-two h5{
 	color:#000;
 	font-size:1em;
-	text-transform:uppercase;
+	text-transform:capitalize;
 	font-weight:bold;
 }
 ul.contact-list-one li, ul.contact-list-two li{
 	color:#000;
 	font-size:0.95em;
 	line-height: 1.8em;
-	text-transform:uppercase;
+	text-transform:capitalize;
 }
 .contact-list-one li a {
     color: #000000;
