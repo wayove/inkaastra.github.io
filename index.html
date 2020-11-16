@@ -45,6 +45,61 @@
 				 new WOW().init();
 			</script>
 			
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+
+    <script>
+    function postToGoogle() {
+                    var field1 = $("#nameField").val();
+                    var field2 = $("#emailField").val();
+                    var field3 = $("#mobField").val();
+                    var field4 = $("#reasonField option:selected").text();
+                    var field5 = $("#queryField").val();
+            
+            if(field1 == ""){
+              alert('Please Fill Your Name');
+              document.getElementById("nameField").focus();
+              return false;
+            }
+            if(field2 == ""){
+              alert('Please Fill Your Email');
+              document.getElementById("emailField").focus();
+              return false;
+            }
+            if(field3 == "" || field3.length > 10 || field3.length < 10){
+              alert('Please Fill Your Mobile Number');
+              document.getElementById("mobField").focus();
+              return false;
+            }
+            if(field5 == ""){
+              alert('Please enter your brief requirement');
+              document.getElementById("queryField").focus();
+              return false;
+            }
+
+
+            
+      
+                    $.ajax({
+                        url: "https://docs.google.com/forms/u/1/d/e/1FAIpQLSeV09KOGyCpbqJpcQIWJ5UNa3oegRXa5bwcU5maw1DJl_3owAs/formResponse?",
+              data: {"entry.175438875": field1, "entry.68905849": field2, "entry.765265183": field3, "entry.1441183677": field4, "entry.1739396808": field5},
+                        type: "POST",
+                        dataType: "xml",
+                        success: function(d)
+              {
+              },
+              error: function(x, y, z)
+                {
+
+                  $('#success-msg').show();
+                  $('#form').hide();
+                  
+                }
+                    });
+            return false;
+                }
+    </script>
+    
 			<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
 			<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
 		</head>
@@ -721,15 +776,34 @@
 										</ul>
 									</div>
 									<div class="col-md-5 wow fadeInRight">
-										<div class="contact-form">
-											<form method="post">
-												<input type="text" style="color: #000;" class="textbox" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-												<input type="text" style="color: #000;" class="textbox" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-												<textarea onfocus="this.value= '';" style="color: #000;" onblur="if (this.value == '') {this.value = 'Message';}">Message
-												</textarea>
-												<label class="button-two button-type-two"><input type="submit" value="Message" style="background: #000;"></label>
-											</form>
-										</div>
+										<h3 id="success-msg"  class="secondary-heading" align="left" style="color: #000;font-size: 15px;line-height: 1.2;display: none;">We have received your request.<br>Someone from MISFIT will contact your soon.<br>Cheers!!!</h3>
+              
+                
+							                <form id="form" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off"> 
+							                  <p><div align="left" style="background-color: #ebebeb;padding: 3%;border: #fff; border-radius: 20px;" class="leftContactParagraph">
+							                    <h3 class="secondary-heading" style="color: #000;font-size: 15px;line-height: 1.2;">Name</h3>
+							                    <input id="nameField"  name="entry.175438875" placeholder="Enter your name" type="text" style="padding: 8px;width: 90%; border-radius: 10px;border: #ebebeb;" required> <br>
+							                    <h3 class="secondary-heading" style="color: #000;font-size: 15px;line-height: 1.2;">Email</h3>
+							                    <input id="emailField" name="entry.68905849" placeholder="hello@thisismisfit.com" type="email" style="padding: 8px;width: 90%; border-radius: 10px;border: #ebebeb;" required> <br>
+							                    <h3 class="secondary-heading" style="color: #000;font-size: 15px;line-height: 1.2;">Phone</h3>
+							                    <input id="mobField" name="entry.765265183" placeholder="" type="text"  style="padding: 8px;width: 90%; border-radius: 10px;border: #ebebeb;" required> <br> <!-- pattern="^\d{9}$" -->
+							                    <h3 class="secondary-heading" style="color: #000;font-size: 15px;line-height: 1.2;">Reason to reach out</h3>
+							                    <select id="reasonField" name="entry.1441183677" placeholder="Reason to reach out" style="padding: 8px;width: 90%; border-radius: 10px;border: #ebebeb;" required>
+							                      <option value="Branding">Like to do a Tattoo</option>
+							                      <option value="Re-branding">Like to do a Piercing</option>
+							                      <option value="Digital Marketing">Want to make Conceptual Design</option>
+							                      <option value="Website Development">Hire us for Illustration</option>
+							                      <option value="Website Development">Hire us for Cartooning</option>
+							                      <option value="Others">Any other ink related work</option> 
+							                    </select> <br>
+							                    <h3 class="secondary-heading" style="color: #000;font-size: 15px;line-height: 1.2;">Brief Note</h3>
+							                    <textarea id="queryField" name="entry.1739396808" placeholder="" type="text" style="padding: 8px;width: 90%; border-radius: 10px;border: #ebebeb;" required>  </textarea><br><br>
+							                    
+							                    <!-- <p><div align="left"><a href="javascript:{}" id="send" onclick="document.getElementById('form').submit();"></a></div></p> -->
+							                    <label class="button-two button-type-two"><input type="submit" value="Submit" style="background: #000;"></label>
+							                    <!-- <button class="button-two button-type-two" id="send" type="submit"  ><b>SUBMIT</b></button> -->
+							                    </div></p>
+							                </form>
 									</div>
    	                        </div>
 					</div>
